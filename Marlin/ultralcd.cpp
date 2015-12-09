@@ -524,25 +524,25 @@ static void lcd_preheat_pla_menu()
     END_MENU();
 }
 
-static void lcd_preheat_abs_menu()
-{
-    START_MENU();
-    MENU_ITEM(back, MSG_PREPARE, lcd_prepare_menu);
-    MENU_ITEM(function, MSG_PREHEAT_ABS0, lcd_preheat_abs0);
-#if TEMP_SENSOR_1 != 0 //2 extruder preheat
-    MENU_ITEM(function, MSG_PREHEAT_ABS1, lcd_preheat_abs1);
-#endif //2 extruder preheat
-#if TEMP_SENSOR_2 != 0 //3 extruder preheat
-    MENU_ITEM(function, MSG_PREHEAT_ABS2, lcd_preheat_abs2);
-#endif //3 extruder preheat
-#if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 //all extruder preheat
-    MENU_ITEM(function, MSG_PREHEAT_ABS012, lcd_preheat_abs012);
-#endif //2 extruder preheat
-#if TEMP_SENSOR_BED != 0
-    MENU_ITEM(function, MSG_PREHEAT_ABS_BEDONLY, lcd_preheat_abs_bedonly);
-#endif
-    END_MENU();
-}
+//static void lcd_preheat_abs_menu()
+//{
+//    START_MENU();
+//    MENU_ITEM(back, MSG_PREPARE, lcd_prepare_menu);
+//    MENU_ITEM(function, MSG_PREHEAT_ABS0, lcd_preheat_abs0);
+//#if TEMP_SENSOR_1 != 0 //2 extruder preheat
+//    MENU_ITEM(function, MSG_PREHEAT_ABS1, lcd_preheat_abs1);
+//#endif //2 extruder preheat
+//#if TEMP_SENSOR_2 != 0 //3 extruder preheat
+//    MENU_ITEM(function, MSG_PREHEAT_ABS2, lcd_preheat_abs2);
+//#endif //3 extruder preheat
+//#if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 //all extruder preheat
+//    MENU_ITEM(function, MSG_PREHEAT_ABS012, lcd_preheat_abs012);
+//#endif //2 extruder preheat
+//#if TEMP_SENSOR_BED != 0
+//    MENU_ITEM(function, MSG_PREHEAT_ABS_BEDONLY, lcd_preheat_abs_bedonly);
+//#endif
+//    END_MENU();
+//}
 
 void lcd_cooldown()
 {
@@ -569,10 +569,10 @@ static void lcd_prepare_menu()
 #if TEMP_SENSOR_0 != 0
   #if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 || TEMP_SENSOR_BED != 0
     MENU_ITEM(submenu, MSG_PREHEAT_PLA, lcd_preheat_pla_menu);
-    MENU_ITEM(submenu, MSG_PREHEAT_ABS, lcd_preheat_abs_menu);
+   // MENU_ITEM(submenu, MSG_PREHEAT_ABS, lcd_preheat_abs_menu);
   #else
     MENU_ITEM(function, MSG_PREHEAT_PLA, lcd_preheat_pla0);
-    MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs0);
+    //MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs0);
   #endif
 #endif
     MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
@@ -753,7 +753,7 @@ static void lcd_control_menu()
     START_MENU();
     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
     MENU_ITEM(submenu, MSG_TEMPERATURE, lcd_control_temperature_menu);
-    MENU_ITEM(submenu, MSG_MOTION, lcd_control_motion_menu);
+//    MENU_ITEM(submenu, MSG_MOTION, lcd_control_motion_menu);
 #ifdef DOGLCD
 //    MENU_ITEM_EDIT(int3, MSG_CONTRAST, &lcd_contrast, 0, 63);
     MENU_ITEM(submenu, MSG_CONTRAST, lcd_set_contrast);
@@ -797,17 +797,17 @@ static void lcd_control_temperature_menu()
     MENU_ITEM_EDIT(float3, MSG_MAX, &autotemp_max, 0, HEATER_0_MAXTEMP - 15);
     MENU_ITEM_EDIT(float32, MSG_FACTOR, &autotemp_factor, 0.0, 1.0);
 #endif
-#ifdef PIDTEMP
-    MENU_ITEM_EDIT(float52, MSG_PID_P, &Kp, 1, 9990);
+//#ifdef PIDTEMP
+//    MENU_ITEM_EDIT(float52, MSG_PID_P, &Kp, 1, 9990);
     // i is typically a small value so allows values below 1
-    MENU_ITEM_EDIT_CALLBACK(float52, MSG_PID_I, &raw_Ki, 0.01, 9990, copy_and_scalePID_i);
-    MENU_ITEM_EDIT_CALLBACK(float52, MSG_PID_D, &raw_Kd, 1, 9990, copy_and_scalePID_d);
-# ifdef PID_ADD_EXTRUSION_RATE
-    MENU_ITEM_EDIT(float3, MSG_PID_C, &Kc, 1, 9990);
-# endif//PID_ADD_EXTRUSION_RATE
-#endif//PIDTEMP
+//    MENU_ITEM_EDIT_CALLBACK(float52, MSG_PID_I, &raw_Ki, 0.01, 9990, copy_and_scalePID_i);
+//    MENU_ITEM_EDIT_CALLBACK(float52, MSG_PID_D, &raw_Kd, 1, 9990, copy_and_scalePID_d);
+//# ifdef PID_ADD_EXTRUSION_RATE
+//    MENU_ITEM_EDIT(float3, MSG_PID_C, &Kc, 1, 9990);
+//# endif//PID_ADD_EXTRUSION_RATE
+//#endif//PIDTEMP
     MENU_ITEM(submenu, MSG_PREHEAT_PLA_SETTINGS, lcd_control_temperature_preheat_pla_settings_menu);
-    MENU_ITEM(submenu, MSG_PREHEAT_ABS_SETTINGS, lcd_control_temperature_preheat_abs_settings_menu);
+//    MENU_ITEM(submenu, MSG_PREHEAT_ABS_SETTINGS, lcd_control_temperature_preheat_abs_settings_menu);
     END_MENU();
 }
 

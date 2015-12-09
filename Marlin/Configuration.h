@@ -23,7 +23,7 @@
 
 //                      |01234567890123456789|
 #ifndef VERSION_BASE
-#define VERSION_BASE "Deskbox: DEV"
+#define VERSION_BASE "Deskbox: v02"
 #endif
 #ifndef VERSION_PROFILE
 #define VERSION_PROFILE "Github checkout"
