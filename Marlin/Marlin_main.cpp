@@ -1986,7 +1986,7 @@ void process_commands()
         previous_millis_cmd = millis();
       }
       break;
-    case 190: // M190 - Wait for bed heater to reach target.
+    /*case 190: // M190 - Wait for bed heater to reach target.
     #if defined(TEMP_BED_PIN) && TEMP_BED_PIN > -1
         LCD_MESSAGEPGM(MSG_BED_HEATING);
         if (code_seen('S')) {
@@ -2021,7 +2021,7 @@ void process_commands()
         LCD_MESSAGEPGM(MSG_BED_DONE);
         previous_millis_cmd = millis();
     #endif
-        break;
+        break;*/
 
     #if defined(FAN_PIN) && FAN_PIN > -1
       case 106: //M106 Fan On

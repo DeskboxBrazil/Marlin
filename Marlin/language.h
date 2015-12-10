@@ -1542,7 +1542,7 @@
 #define MSG_PREHEAT_PLA1 " Pre-aquecer PLA 2"
 #define MSG_PREHEAT_PLA2 " Pre-aquecer PLA 3"
 #define MSG_PREHEAT_PLA012 " pre-aq. PLA Todos"
-#define MSG_PREHEAT_PLA_BEDONLY " pre-aq. PLA \002Base"
+//#define MSG_PREHEAT_PLA_BEDONLY " pre-aq. PLA \002Base"
 #define MSG_PREHEAT_PLA_SETTINGS "Ajustes PLA"
 //#define MSG_PREHEAT_ABS "Pre-aquecer ABS"
 //#define MSG_PREHEAT_ABS0 " pre-aquecer ABS 1"
@@ -1569,10 +1569,10 @@
 #define MSG_MOVE_1MM "Mover 1mm"
 #define MSG_MOVE_10MM "Mover 10mm"
 #define MSG_SPEED "Velocidade"
-#define MSG_NOZZLE "\002Bico"
+#define MSG_NOZZLE "\002 Temp. Bico"
 #define MSG_NOZZLE1 "\002Bico2"
 #define MSG_NOZZLE2 "\002Bico3"
-#define MSG_BED "\002Base:"
+//#define MSG_BED "\002Base:"
 #define MSG_FAN_SPEED "Vel ventilador"
 #define MSG_FLOW "Fluxo"
 #define MSG_FLOW0 "Fluxo0"
@@ -1685,8 +1685,8 @@
 #define MSG_M109_INVALID_EXTRUDER "M109 Extrusor inválido "
 #define MSG_HEATING "Aquecendo..."
 #define MSG_HEATING_COMPLETE "Aquecido."
-#define MSG_BED_HEATING "Aquecendo a Base."
-#define MSG_BED_DONE "Base quente."
+//#define MSG_BED_HEATING "Aquecendo a Base."
+//#define MSG_BED_DONE "Base quente."
 #define MSG_M115_REPORT                                                        \
   "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for gen6 "                    \
   "FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION           \
