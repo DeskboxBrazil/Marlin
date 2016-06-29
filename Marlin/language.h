@@ -23,7 +23,7 @@
 // 13 Basque-Euskera
 
 #ifndef LANGUAGE_CHOICE
-#define LANGUAGE_CHOICE 8 // Pick your language from the list above
+#define LANGUAGE_CHOICE 5 // Pick your language from the list above
 #endif
 
 #define PROTOCOL_VERSION "1.0"
@@ -948,6 +948,7 @@
 #define MSG_FLOW1 "Flujo 1"
 #define MSG_FLOW2 "Flujo 2"
 #define MSG_CONTROL "Control"
+#define MSG_VERSION "Version Firmware"
 #define MSG_MIN "\002 Min"
 #define MSG_MAX "\002 Max"
 #define MSG_FACTOR "\002 Fact"
