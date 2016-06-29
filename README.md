@@ -1,19 +1,6 @@
-A new beta version is avaiable.
-Look under the Marlin_v1 branch. We also made a tag that you can download.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="alert alert-info">
+**Development is happening at the `Marlin_v1` branch, please look there.**
+</div>
 
 This firmware is a mashup between Sprinter, grbl and many original parts.
  (https://github.com/kliment/Sprinter)
@@ -24,12 +11,12 @@ Features:
  - High steprate
  - Look ahead (Keep the speed high when possible. High cornering speed)
  - Interrupt based temperature protection
- - preliminary support for Matthew Roberts advance algorithm 
+ - preliminary support for Matthew Roberts advance algorithm
    For more info see: http://reprap.org/pipermail/reprap-dev/2011-May/003323.html
 
 This firmware is optimized for gen6 electronics.
 
-The default baudrate is 250000. 
+The default baudrate is 250000.
 This gives less communication errors then regular baudrates.
 
 ========================================================================================
@@ -51,7 +38,7 @@ Copy the Marlin firmware
    (Use the download button)
 
 Start the arduino IDE.
-Select Tools -> Board -> Sanguino 
+Select Tools -> Board -> Sanguino
 Select the correct serial port in Tools ->Serial Port
 Open Marlin.pde
 
@@ -78,10 +65,5 @@ On some systems we get compilation errors.
 This is caused by the "wiring_serial.c" and "wiring.c".
 The simple fix is to delete these files but this may have a performance impact.
 
-The best workaround is to move these files to sanguino directory. 
+The best workaround is to move these files to sanguino directory.
 (".../arduino-0018/hardware/Sanguino/cores/arduino/" on windows systems)
-
-
-
-
-
