@@ -1,10 +1,14 @@
-==========================
-Marlin 3D Printer Firmware
-==========================
-Marlin has a GPL license because I believe in open development.
-Please do not use this code in products (3D printers, CNC etc) that are closed source or are crippled by a patent.
+# Marlin for Deskbox Printers
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ErikZalm&url=https://github.com/ErikZalm/Marlin&title=Marlin&language=&tags=github&category=software)
+## How to select the language
+Before compiling, edit the file `Marlin/language.h` and change the line:
+
+```cpp
+#define LANGUAGE_CHOICE 8 // Pick your language from the list above
+```
+* 8 is Portuguese
+* 5 is Spanish
+
 
 Quick Information
 ===================
@@ -334,10 +338,11 @@ Bear in mind that really fast moves may render step skipping. 6000 mm/min (100mm
 
 The Z axis is lifted when traveling to the first probe point by Z_RAISE_BEFORE_PROBING value
 and then lifted when traveling from first to second and second to third point by Z_RAISE_BETWEEN_PROBINGS.
-All values are in mm as usual. 
+All values are in mm as usual.
 
 That's it.. enjoy never having to calibrate your Z endstop neither leveling your bed by hand anymore ;-)
 
 
-
-
+## License
+Marlin has a GPL license because I believe in open development.
+Please do not use this code in products (3D printers, CNC etc) that are closed source or are crippled by a patent.
