@@ -7,7 +7,7 @@
 4. Open `Marlin/Marlin.ino`
 5. Select `Tools -> Board -> Arduino Mega`.
 6. Set the language by editing the `language.h` file:  
-  ```cpp  
+  ```
   #define LANGUAGE_CHOICE 8
   ```  
   Use `8` for Portuguese or `5` for Spanish.
