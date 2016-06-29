@@ -1,14 +1,20 @@
 # Marlin for Deskbox Printers
 
-## How to select the language
-Before compiling, edit the file `Marlin/language.h` and change the line:
-
-```cpp
-#define LANGUAGE_CHOICE 8 // Pick your language from the list above
-```
-* 8 is Portuguese
-* 5 is Spanish
-
+## Configuring and compilation
+1. Download the [Marlin firmware](https://github.com/DeskboxBrazil/Marlin/archive/Marlin_v1.zip).
+2. Install the [Arduino software](http://www.arduino.cc/en/Main/Software).
+3. Start the Arduino IDE.
+4. Open `Marlin/Marlin.ino`
+5. Select `Tools -> Board -> Arduino Mega`.
+6. Set the language by editing the `language.h` file:
+  ```cpp
+  #define LANGUAGE_CHOICE 8 // Pick your language from the list above
+  ```
+  Use `8` for Portuguese or `5` for Spanish.
+7. Click the `Sketch -> Export compiled Binary` menu option.
+8. The resulting binaries will be written in the `Marlin` folder:  
+`Marlin/Marlin.ino.mega.hex`  
+`Marlin/Marlin.ino.with_bootloader.mega.hex`
 
 Quick Information
 ===================
@@ -243,32 +249,6 @@ M Codes
 *  M351 - Toggle MS1 MS2 pins directly.
 *  M928 - Start SD logging (M928 filename.g) - ended by M29
 *  M999 - Restart after being stopped by error
-
-
-Configuring and compilation:
-============================
-
-Install the arduino software IDE/toolset v23 (Some configurations also work with 1.x.x)
-   http://www.arduino.cc/en/Main/Software
-
-Download the Marlin firmware
-   https://github.com/ErikZalm/Marlin/tree/Marlin_v1
-   Use the "Download Zip" button on the right.
-
-For gen6/gen7 and sanguinololu the Sanguino directory in the Marlin dir needs to be copied to the arduino environment.
-  copy ArduinoAddons\Arduino_x.x.x\sanguino <arduino home>\hardware\Sanguino
-
-Start the arduino IDE.
-Select Tools -> Board -> Arduino Mega 2560    or your microcontroller
-Select the correct serial port in Tools ->Serial Port
-Open Marlin.pde
-
-Click the Verify/Compile button
-
-Click the Upload button
-If all goes well the firmware is uploading
-
-That's ok.  Enjoy Silky Smooth Printing.
 
 ===============================================
 Instructions for configuring Bed Auto Leveling
