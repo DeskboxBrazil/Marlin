@@ -15,6 +15,7 @@
 8. The resulting binaries will be written in the `Marlin` folder:  
 `Marlin/Marlin.ino.mega.hex`  
 `Marlin/Marlin.ino.with_bootloader.mega.hex`
+9. Copy the `Marlin/Marlin.ino.mega.hex` file to the `cura-binary-data` project into the `cura/resources/firmware` folder, renaming it as `MarlinDeskbox-xx.hex`, where `xx` is the ISO language code in lower case: `pt` for Portuguese, `es` for Spanish and `en` for English.
 
 Quick Information
 ===================
